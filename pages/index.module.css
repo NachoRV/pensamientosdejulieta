@@ -1,0 +1,11 @@
+.hero {
+  background-image: url('../public/IMG_3106.JPG');
+  width: 100vw;
+  height: 500px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  margin-bottom: 50px;
+
+}
