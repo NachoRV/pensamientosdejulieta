@@ -38,7 +38,7 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
             <ul className="list-inside ml-8">
             { allCategories.map( category =>
               <li className='mb-2'>
-                <Link href={`/category/${category.slug}`} >{ `➤ ${category.name}`}</Link>
+                <Link href={`/categorias/${category.slug}`} >{ `➤ ${category.name}`}</Link>
               </li>
               )}
             </ul>
