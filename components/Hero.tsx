@@ -2,6 +2,8 @@ import Header from "./header";
 import { Avatar, Dropdown, Navbar } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from 'next/router'
+import Instagram from '../public/favicon/instagram.svg'
+import Twitter from '../public/favicon/twitter.svg'
 
 export default function Hero() {
   const router = useRouter()
@@ -15,8 +17,15 @@ export default function Hero() {
   ];
   return (
     <>
-      <div className="flex flex-col w-screen text-center h-40 justify-center items-center mb-0">
-        <h1 className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-3xl font-extrabold text-transparent pt-14">
+      <div className="flex flex-col w-screen text-center justify-center items-center mb-0">
+        <div className="flex w-screen justify-end m-5 gap-3 pr-5">
+          {/* <a href="https://www.instagram.com/" target="_blank">
+            <Instagram />
+          </a>
+
+          <Twitter /> */}
+        </div>
+        <h1 className="text-6xl font-extrabold pt-14">
             Pensamientos de Julieta
           </h1>
         <Navbar isBordered variant="sticky">
@@ -33,7 +42,7 @@ export default function Hero() {
             enableCursorHighlight
             activeColor="warning"
             hideIn="xs"
-            variant="underline"
+            variant="default"
           >
             <Navbar.Link isActive={isActiveRoute('/')} href="/">Inicio</Navbar.Link>
             <Navbar.Link isActive={isActiveRoute('/posts')} href="/posts">Blog</Navbar.Link>
@@ -57,9 +66,6 @@ export default function Hero() {
               >
                 <Link
                   color="inherit"
-                  css={{
-                    minWidth: "100%",
-                  }}
                   href={item.url}
                 >
                   {item.name}

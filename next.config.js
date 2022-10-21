@@ -14,7 +14,16 @@ module.exports = {
       '1.gravatar.com',
       '2.gravatar.com',
       'secure.gravatar.com',
-      'pensamientos-de-julieta.local'
+      'pensamientos-de-julieta.local',
+      'pensamientosdeju-w0faxtje2f.live-website.com'
     ],
   },
+    webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
+
+    return config;
+  }
 }

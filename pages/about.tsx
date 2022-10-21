@@ -14,7 +14,7 @@ export default function Page({ page, preview }) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = await getAllPagesWithSlug()
-  const pageId = data.find(node => node.slug === 'about').id
+  const pageId = data.find(node => node.slug === 'sobre-mi').id
   const page = await getPageWithId(pageId)
   return {
     props: {
