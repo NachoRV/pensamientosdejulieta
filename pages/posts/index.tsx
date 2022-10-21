@@ -35,6 +35,7 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </div>
           <div>
+            <h2 className='font-bold mb-2 text-lg'>Categorías</h2>
             <ul className="list-inside ml-8">
             { allCategories.map( category =>
               <li className='mb-2'>
