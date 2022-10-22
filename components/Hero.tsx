@@ -16,7 +16,7 @@ export default function Hero() {
   ];
   return (
     <>
-      <div className="flex flex-col w-screen text-center justify-center items-center mb-0">
+      <div className="flex flex-col w-screen text-center justify-center items-center mb-16">
         <div className="flex w-screen justify-end m-5 gap-3 pr-5">
           {/* <a href="https://www.instagram.com/" target="_blank">
             <Instagram />
