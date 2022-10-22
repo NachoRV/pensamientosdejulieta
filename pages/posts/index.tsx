@@ -20,7 +20,7 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
       </Head>
       <Container>
         <Intro />
-        <div className="grid grid-cols-5 md:grid-cols-5">
+        <div className="grid grid-cols-5 md:grid-cols-5 sm:grid-cols-1">
           <div className="col-span-4">
             {heroPost && (
               <HeroPost
@@ -34,7 +34,7 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
             )}
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </div>
-          <div>
+          <div className="ml-8"> 
             <h2 className='font-bold mb-2 text-lg'>Categorías</h2>
             <ul className="list-inside ml-8">
             { allCategories.map( category =>
