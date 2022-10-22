@@ -16,7 +16,7 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
   return (
     <PostLayout preview={preview}>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>{CMS_NAME}</title>
       </Head>
       <Container>
         <Intro />
@@ -35,11 +35,18 @@ export default function Index({ allPosts: { edges }, preview, allCategories }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </div>
           <div className="ml-8"> 
-            <h2 className='font-bold mb-2 text-lg'>Categorías</h2>
-            <ul className="list-inside ml-8">
+            <ul className="list-inside">
             { allCategories.map( category =>
-              <li className='mb-2'>
-                <Link href={`/categorias/${category.slug}`} >{ `➤ ${category.name}`}</Link>
+              <li 
+                key={category.slug}
+                className='m-0 mb-2'>
+                <Link href={`/categorias/${category.slug}`} >
+                  <a className='flex items-center'>
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16"></polyline></svg>
+                    {`${category.name}`}
+
+                  </a>
+                </Link>
               </li>
               )}
             </ul>

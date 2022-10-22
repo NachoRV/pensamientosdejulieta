@@ -13,7 +13,11 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
-
+:root {
+    --manatee: #8f91a2ff;
+    --davys-grey: #505a5bff;
+    --outer-space-crayola: #343f3eff;
+}
 .has-text-align-left {
   @apply text-left;
 }
@@ -102,3 +106,4 @@
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
 }
+

@@ -10,15 +10,14 @@ import { CMS_NAME } from '../lib/constants'
 import styles from './index.module.css'
 export default function Index({ allPosts: { edges }, preview, page }) {
   const heroPost = edges[0]?.node
-  const morePosts = edges.slice(1)
+  const morePosts = edges
 
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>{CMS_NAME}</title>
       </Head>
       <div className={styles.hero}>
-
       </div>
       <Container>
           {/* {heroPost && (
